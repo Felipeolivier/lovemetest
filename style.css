@@ -63,5 +63,5 @@ button {
   background: white;
   position: absolute;
   right: 0;
-  transition: left 1.4s ease, top 1.3s ease;
+  transition: left 0.2s ease, top 0.2s ease;
 }
