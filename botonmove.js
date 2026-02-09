@@ -1,6 +1,6 @@
 const nao = document.getElementById("nao");
 
-const DISTANCIA_MINIMA = 150; // ajuste aqui se quiser mais fuga
+const DISTANCIA_MINIMA = 21; // ajuste aqui se quiser mais fuga
 const MARGEM = 20; // não deixar sair da tela
 
 nao.addEventListener("mouseenter", () => {
