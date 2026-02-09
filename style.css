@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background: #ffc0cb;
   display: flex;
   align-items: center;
@@ -23,33 +23,38 @@ body {
   padding: 20px;
 }
 
+/* GIF */
 .gif {
   width: 180px;
   max-width: 80vw;
 }
 
+/* Texto */
 h1 {
   font-size: 1.4rem;
 }
 
-/* GRID pros botões */
+/* Área dos botões */
 .buttons {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 25px; /* o que você pediu */
-  margin-top: 10px;
+  display: flex;
+  gap: 25px;              /* separação de 10+ px */
+  margin-top: 15px;
+  position: relative;     /* referência pro botão fugir */
 }
 
-/* Botões */
-.buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* garante dois botões */
-  gap: 25px;
-  margin-top: 20px;
-  width: 100%;
-  max-width: 260px;
+/* Botões (base) */
+button {
+  padding: 12px 22px;     /* evita botão achatado */
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  min-width: 90px;
+  height: 44px;           /* força altura consistente */
+  transition: transform 0.15s ease;
 }
 
+/* Botão SIM */
 #sim {
   background: #ff4081;
   color: white;
@@ -59,6 +64,12 @@ h1 {
   transform: scale(0.95);
 }
 
+/* Botão NÃO */
 #nao {
-  transition: left 0.25s ease, top 0.25s ease;
+  background: white;
+  color: #333;
+  position: absolute;     /* necessário pra mover suavemente */
+  transition: 
+    left 0.35s ease,
+    top 0.35s ease;
 }
