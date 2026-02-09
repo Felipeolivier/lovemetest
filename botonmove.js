@@ -1,42 +1,13 @@
 const nao = document.getElementById("nao");
+const area = document.querySelector(".buttons");
 
-let iniciado = false;
+nao.addEventListener("mouseenter", () => {
+  const areaWidth = area.clientWidth - nao.offsetWidth;
+  const areaHeight = area.clientHeight - nao.offsetHeight;
 
-function iniciar() {
-  if (!iniciado) {
-    const rect = nao.getBoundingClientRect();
+  const x = Math.random() * areaWidth;
+  const y = Math.random() * areaHeight;
 
-    nao.style.position = "fixed";
-    nao.style.left = rect.left + "px";
-    nao.style.top  = rect.top  + "px";
-
-    iniciado = true;
-  }
-}
-
-function fugir() {
-  iniciar();
-
-  const margem = 20;
-
-  const maxX = window.innerWidth  - nao.offsetWidth  - margem;
-  const maxY = window.innerHeight - nao.offsetHeight - margem;
-
-  const deslocamentoX = (Math.random() * 140) - 70;
-  const deslocamentoY = (Math.random() * 140) - 70;
-
-  let novoX = nao.offsetLeft + deslocamentoX;
-  let novoY = nao.offsetTop  + deslocamentoY;
-
-  novoX = Math.max(margem, Math.min(maxX, novoX));
-  novoY = Math.max(margem, Math.min(maxY, novoY));
-
-  nao.style.left = novoX + "px";
-  nao.style.top  = novoY + "px";
-}
-
-// PC
-nao.addEventListener("mouseenter", fugir);
-
-// Celular
-nao.addEventListener("touchstart", fugir);
+  nao.style.left = `${x}px`;
+  nao.style.top = `${y}px`;
+});

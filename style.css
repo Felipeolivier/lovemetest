@@ -20,56 +20,48 @@ body {
   align-items: center;
   gap: 20px;
   text-align: center;
-  padding: 20px;
 }
 
-/* GIF */
+/* gif */
 .gif {
   width: 180px;
-  max-width: 80vw;
 }
 
-/* Texto */
+/* texto */
 h1 {
   font-size: 1.4rem;
 }
 
-/* Área dos botões */
+/* área dos botões */
 .buttons {
+  position: relative;      /* referência pro botão fugir */
+  width: 260px;
+  height: 60px;            /* 👈 ISSO resolve o sumiço */
   display: flex;
-  gap: 25px;              /* separação de 10+ px */
-  margin-top: 15px;
-  position: relative;     /* referência pro botão fugir */
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Botões (base) */
+/* botões base */
 button {
-  padding: 12px 22px;     /* evita botão achatado */
-  font-size: 1rem;
+  width: 100px;
+  height: 44px;
   border-radius: 12px;
   border: none;
+  font-size: 1rem;
   cursor: pointer;
-  min-width: 90px;
-  height: 44px;           /* força altura consistente */
-  transition: transform 0.15s ease;
 }
 
-/* Botão SIM */
+/* sim */
 #sim {
   background: #ff4081;
   color: white;
 }
 
-#sim:active {
-  transform: scale(0.95);
-}
-
-/* Botão NÃO */
+/* não */
 #nao {
   background: white;
-  color: #333;
-  position: absolute;     /* necessário pra mover suavemente */
-  transition: 
-    left 0.35s ease,
-    top 0.35s ease;
+  position: absolute;
+  right: 0;
+  transition: left 0.3s ease, top 0.3s ease;
 }
