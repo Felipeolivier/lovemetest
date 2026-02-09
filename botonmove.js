@@ -1,26 +1,12 @@
 const nao = document.getElementById("nao");
-
-const DISTANCIA_MINIMA = 120;
-const MARGEM = 20;
+const area = document.querySelector(".buttons");
 
 nao.addEventListener("mouseenter", () => {
-  const rect = nao.getBoundingClientRect();
+  const areaWidth = area.clientWidth - nao.offsetWidth;
+  const areaHeight = area.clientHeight - nao.offsetHeight;
 
-  const maxX = window.innerWidth - rect.width - MARGEM;
-  const maxY = window.innerHeight - rect.height - MARGEM;
-
-  let x, y, dx, dy;
-
-  do {
-    x = Math.random() * maxX;
-    y = Math.random() * maxY;
-
-    dx = x - rect.left;
-    dy = y - rect.top;
-  } while (
-    Math.abs(dx) < DISTANCIA_MINIMA &&
-    Math.abs(dy) < DISTANCIA_MINIMA
-  );
+  const x = Math.random() * areaWidth;
+  const y = Math.random() * areaHeight;
 
   nao.style.left = `${x}px`;
   nao.style.top = `${y}px`;
