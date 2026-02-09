@@ -25,8 +25,8 @@ function fugir() {
   const maxY = parentRect.height - nao.offsetHeight;
 
   // movimento curto (fuga, não teleporte)
-  const deslocamentoX = (Math.random() * 120) - 60;
-  const deslocamentoY = (Math.random() * 80) - 40;
+  const deslocamentoX = (Math.random() * 40) - 40;
+  const deslocamentoY = (Math.random() * 30) - 20;
 
   let novoX = nao.offsetLeft + deslocamentoX;
   let novoY = nao.offsetTop  + deslocamentoY;
