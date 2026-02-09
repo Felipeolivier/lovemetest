@@ -1,11 +1,13 @@
 const nao = document.getElementById("nao");
 
-const DISTANCIA_MINIMA = 21; // ajuste aqui se quiser mais fuga
-const MARGEM = 20; // não deixar sair da tela
+const DISTANCIA_MINIMA = 120;
+const MARGEM = 20;
 
 nao.addEventListener("mouseenter", () => {
-  const maxX = window.innerWidth - nao.offsetWidth - MARGEM;
-  const maxY = window.innerHeight - nao.offsetHeight - MARGEM;
+  const rect = nao.getBoundingClientRect();
+
+  const maxX = window.innerWidth - rect.width - MARGEM;
+  const maxY = window.innerHeight - rect.height - MARGEM;
 
   let x, y, dx, dy;
 
@@ -13,10 +15,8 @@ nao.addEventListener("mouseenter", () => {
     x = Math.random() * maxX;
     y = Math.random() * maxY;
 
-    dx = x - nao.offsetLeft;
-    dy = y - nao.offsetTop;
-
-    // continua tentando até garantir distância suficiente
+    dx = x - rect.left;
+    dy = y - rect.top;
   } while (
     Math.abs(dx) < DISTANCIA_MINIMA &&
     Math.abs(dy) < DISTANCIA_MINIMA
