@@ -1,7 +1,7 @@
 const nao = document.getElementById("nao");
 const area = document.querySelector(".buttons");
 
-const DISTANCIA_MINIMA = 80; // 👈 aumenta esse valor se quiser mais fuga
+const DISTANCIA_MINIMA = 120; // 👈 aumenta esse valor se quiser mais fuga
 
 nao.addEventListener("mouseenter", () => {
   const areaWidth = area.clientWidth - nao.offsetWidth;
