@@ -1,30 +1,26 @@
 const nao = document.getElementById("nao");
-const area = document.querySelector(".buttons");
 
-const DISTANCIA_MINIMA = 120; // 👈 aumenta esse valor se quiser mais fuga
+const DISTANCIA_MINIMA = 150; // ajuste aqui se quiser mais fuga
+const MARGEM = 20; // não deixar sair da tela
 
 nao.addEventListener("mouseenter", () => {
-  const areaWidth = area.clientWidth - nao.offsetWidth;
-  const areaHeight = area.clientHeight - nao.offsetHeight;
+  const maxX = window.innerWidth - nao.offsetWidth - MARGEM;
+  const maxY = window.innerHeight - nao.offsetHeight - MARGEM;
 
-  let x = Math.random() * areaWidth;
-  let y = Math.random() * areaHeight;
+  let x, y, dx, dy;
 
-  // força um deslocamento mínimo
-  const dx = x - nao.offsetLeft;
-  const dy = y - nao.offsetTop;
+  do {
+    x = Math.random() * maxX;
+    y = Math.random() * maxY;
 
-  if (Math.abs(dx) < DISTANCIA_MINIMA) {
-    x += dx >= 0 ? DISTANCIA_MINIMA : -DISTANCIA_MINIMA;
-  }
+    dx = x - nao.offsetLeft;
+    dy = y - nao.offsetTop;
 
-  if (Math.abs(dy) < DISTANCIA_MINIMA) {
-    y += dy >= 0 ? DISTANCIA_MINIMA : -DISTANCIA_MINIMA;
-  }
-
-  // garante que não saia da área
-  x = Math.max(0, Math.min(x, areaWidth));
-  y = Math.max(0, Math.min(y, areaHeight));
+    // continua tentando até garantir distância suficiente
+  } while (
+    Math.abs(dx) < DISTANCIA_MINIMA &&
+    Math.abs(dy) < DISTANCIA_MINIMA
+  );
 
   nao.style.left = `${x}px`;
   nao.style.top = `${y}px`;
