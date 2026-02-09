@@ -3,70 +3,15 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ISSO AQUI resolve o problema do zoom -->
+  <!-- Viewport correto pra mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Você me ama? 💖</title>
 
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-  <!-- CSS depois vai pra /static/css/style.css -->
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: #ffc0cb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
-    }
-
-    .gif {
-      width: 180px;
-      max-width: 80vw;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 10px; /* separação de 10px */
-      position: relative;
-    }
-
-    button {
-      padding: 12px 25px;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    #sim {
-      background: #ff4081;
-      color: white;
-    }
-
-    #nao {
-      background: #eee;
-      position: absolute; /* depois o JS vai brincar aqui */
-      left: 0;
-    }
-  </style>
-</head>
 <body>
 
   <div class="container">
