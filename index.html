@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dia dos Namorados 💘</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial;
+      background: pink;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #nao {
+      position: absolute;
+    }
+
+    #sim {
+      background: #ff4081;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Você me ama? 💕</h1>
+
+<button id="sim" onclick="alert('Eu sabia 😈❤️')">
+  Sim
+</button>
+
+<button id="nao">
+  Não
+</button>
+
+<script>
+  const nao = document.getElementById("nao");
+
+  function fugir() {
+    const maxX = window.innerWidth - nao.offsetWidth;
+    const maxY = window.innerHeight - nao.offsetHeight;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    nao.style.left = x + "px";
+    nao.style.top = y + "px";
+  }
+
+  // PC
+  nao.addEventListener("mouseover", fugir);
+
+  // Celular
+  nao.addEventListener("touchstart", fugir);
+</script>
+
+</body>
+</html>
