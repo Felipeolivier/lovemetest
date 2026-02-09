@@ -41,13 +41,13 @@ h1 {
 }
 
 /* Botões */
-button {
-  padding: 12px 25px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.15s ease;
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* garante dois botões */
+  gap: 25px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 260px;
 }
 
 #sim {
