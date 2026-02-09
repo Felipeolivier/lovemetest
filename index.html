@@ -1,74 +1,93 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Dia dos Namorados 💘</title>
+
+  <!-- ISSO AQUI resolve o problema do zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Você me ama? 💖</title>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+  <!-- CSS depois vai pra /static/css/style.css -->
   <style>
     body {
+      margin: 0;
       height: 100vh;
+      background: #ffc0cb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      font-family: Arial;
-      background: pink;
-      overflow: hidden;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .gif {
+      width: 180px;
+      max-width: 80vw;
     }
 
     h1 {
-      margin-bottom: 40px;
+      margin: 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px; /* separação de 10px */
+      position: relative;
     }
 
     button {
-      font-size: 18px;
-      padding: 15px 30px;
+      padding: 12px 25px;
+      font-size: 16px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-    }
-
-    #nao {
-      position: absolute;
     }
 
     #sim {
       background: #ff4081;
       color: white;
     }
+
+    #nao {
+      background: #eee;
+      position: absolute; /* depois o JS vai brincar aqui */
+      left: 0;
+    }
   </style>
 </head>
 <body>
 
-<h1>Você me ama? 💕</h1>
+  <div class="container">
 
-<button id="sim" onclick="alert('Eu sabia 😈❤️')">
-  Sim
-</button>
+    <!-- GIF FOFO -->
+    <img 
+      src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJsNjBqbHdoOG9jbWl5ejR6b2l0bnNlbHZxdWhxbGc0eHBkd3ZiMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1JmGiBtqTuehfYxuy9/giphy.gif" 
+      alt="gif fofo"
+      class="gif"
+    >
 
-<button id="nao">
-  Não
-</button>
+    <!-- PERGUNTA -->
+    <h1>Você me ama? 💖</h1>
 
-<script>
-  const nao = document.getElementById("nao");
+    <!-- BOTÕES -->
+    <div class="buttons">
+      <button id="sim">Sim</button>
+      <button id="nao">Não</button>
+    </div>
 
-  function fugir() {
-    const maxX = window.innerWidth - nao.offsetWidth;
-    const maxY = window.innerHeight - nao.offsetHeight;
-
-    const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
-
-    nao.style.left = x + "px";
-    nao.style.top = y + "px";
-  }
-
-  // PC
-  nao.addEventListener("mouseover", fugir);
-
-  // Celular
-  nao.addEventListener("touchstart", fugir);
-</script>
+  </div>
 
 </body>
 </html>
