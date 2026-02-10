@@ -59,7 +59,7 @@ button {
     position: absolute;
     display: flex;
     justify-content: center;
-    gap: 35px; /* espaço entre YES e NÃO */
+    gap: 15px; /* espaço entre YES e NÃO */
 }
 
 /* Resultado */
