@@ -54,7 +54,8 @@ button {
     background: #ff6b9a;
     color: white;
     position: relative;
-    z-index: 2;
+    justify-self: left
+    /*z-index: 2; /* para garantir que fique acima do noBtn */
 }
 
 
