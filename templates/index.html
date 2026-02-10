@@ -1,0 +1,66 @@
+ <!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Do You Love Me? - Valentine's Day</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">Happy Valentine's Day!</h1>
+                <div class="heart-decoration">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            
+            <div class="gif-container">
+                <img id="valentine-gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Cute Valentine's GIF">
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question-text">Do you love me?</h2>
+            </div>
+            
+            <div class="buttons-container">
+                <button id="yes-btn" class="btn btn-yes">
+                    <i class="fas fa-heart"></i> Yes
+                </button>
+                <button id="no-btn" class="btn btn-no">
+                    <i class="fas fa-times"></i> No
+                </button>
+            </div>
+            
+            <div class="message-container hidden" id="love-message">
+                <div class="message-content">
+                    <i class="fas fa-heart message-heart"></i>
+                    <h3>I love you too!</h3>
+                    <p>You make every day feel like Valentine's Day. 
+                    <br>Thank you for being in my life!</p>
+                    <button id="reset-btn" class="btn btn-reset">
+                        <i class="fas fa-redo"></i> Ask Again
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>Made with <i class="fas fa-heart"></i> for Valentine's Day</p>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <p><i class="fas fa-mouse-pointer"></i> Try to click the "No" button - it's shy!</p>
+        </div>
+    </div>
+
+    <script src="/model/script.js"></script>
+</body>
+</html>
