@@ -57,7 +57,9 @@ button {
 #noBtn {
     background: #ccc;
     position: absolute;
-   
+    display: flex right;
+    justify-content: center;
+    gap: 35px; /* espaço entre YES e NÃO */
 }
 
 /* Resultado */
