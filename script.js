@@ -19,7 +19,7 @@ function moveNoButton() {
     const randomY = Math.random() * maxY;
 
     // Move suavemente usando transform
-    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
 
 /*
