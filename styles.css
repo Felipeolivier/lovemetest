@@ -36,7 +36,7 @@ h2 {
     position: relative;      /* container de referência para o noBtn absoluto */
     height: 80px;
     display: flex;
-    justify-content: center;
+
     align-items: center;
     /* gap serve para quando os botões estiverem no fluxo; aqui só mantemos centralização */
 }
@@ -55,7 +55,7 @@ button {
     color: white;
     position: relative;
     z-index: 2; /* para garantir que fique acima do noBtn */
-    margin-left: 400px; /* ← empurra o SIM para a direita */
+    margin-left: 20px; /* ← empurra o SIM para a direita */
 }
 
 
