@@ -55,7 +55,7 @@ button {
     color: white;
     position: relative;
     z-index: 2; /* para garantir que fique acima do noBtn */
-    margin-right: 05px; /* ← empurra o SIM para a direita */
+    margin-left: 10px; /* ← empurra o SIM para a esquerda */
 }
 
 
