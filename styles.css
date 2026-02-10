@@ -33,11 +33,12 @@ h2 {
 }
 
 .buttons {
-    position: relative;
+    position: relative;      /* container de referência para o noBtn absoluto */
     height: 80px;
     display: flex;
     justify-content: center;
-    gap: 35px; /* espaço entre YES e NÃO */
+    align-items: center;
+    /* gap serve para quando os botões estiverem no fluxo; aqui só mantemos centralização */
 }
 
 button {
@@ -52,12 +53,22 @@ button {
 #yesBtn {
     background: #ff6b9a;
     color: white;
+    position: relative;
+    z-index: 2;
 }
 
-#noBtn {
-    background: #ccc;
-    position: absolute;
 
+#noBtn {
+    position: absolute;      /* você quer manter absolute — ok */
+    z-index: 1;
+    /* posição inicial será definida via JS */
+    transition: left 0.35s ease, top 0.35s ease; /* anima a fuga */
+    /* aparência */
+    background: #ccc;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
 }
 
 /* Resultado */
