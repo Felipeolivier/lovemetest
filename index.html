@@ -1,61 +1,34 @@
- <!-- index.html -->
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Do You Love Me? - Valentine's Day</title>
+    <title>Do You Love Me? - Dia dos Namorados</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3M2w4OHAxOHJ5ajJiZDcyOW5xZnI0d2VqYWI2ZXBjOXNybWNyMjZzYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dL7O9Rt0yItkQWcXJF/giphy.gif"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <div class="header">
-                <h1 class="title">BOM DIA MINHA PRINCESA!</h1>
-                <div class="heart-decoration">
-                    <i class="fas fa-heart">TESTE</i>
-                    <i class="fas fa-heart">TESTE</i>
-                    <i class="fas fa-heart"></i>
-                </div>
-            </div>
-            
-            <div class="gif-container">
-                <img id="valentine-gif" src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3M2w4OHAxOHJ5ajJiZDcyOW5xZnI0d2VqYWI2ZXBjOXNybWNyMjZzYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dL7O9Rt0yItkQWcXJF/giphy.gif" alt="Cute Valentine's GIF">
-            </div>
-            
-            <div class="question-container">
-                <h2 id="question-text">voce me ama?💖</h2>
-            </div>
-            
-            <div class="buttons-container">
-                <button id="yes-btn" class="btn btn-yes">
-                    <i class="fas fa-heart"></i> Yes
-                </button>
-                <button id="no-btn" class="btn btn-no">
-                    <i class="fas fa-times"></i> No
-                </button>
-            </div>
-            
-            <div class="message-container hidden" id="love-message">
-                <div class="message-content">
-                    <i class="fas fa-heart message-heart"></i>
-                    <h3>I love you too!</h3>
-                    <p>You make every day feel like Valentine's Day. 
-                    <br>Thank you for being in my life!</p>
-                    <button id="reset-btn" class="btn btn-reset">
-                        <i class="fas fa-redo"></i> Ask Again
-                    </button>
-                </div>
-            </div>
-            
-            <div class="footer">
-                <p>Made with <i class="fas fa-heart"></i> for Valentine's Day</p>
-            </div>
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Corações animados" class="gif">
+        
+        <h1>Do you love me?</h1>
+        
+        <div class="buttons">
+            <button id="sim">
+                <i class="fas fa-heart"></i> Yes
+            </button>
+            <button id="nao">
+                <i class="fas fa-times"></i> No
+            </button>
         </div>
         
-        <div class="instructions">
-            <p><i class="fas fa-mouse-pointer"></i> Try to click the "No" button - it's shy!</p>
+        <div class="message hidden" id="message">
+            <h2>I love you too! ❤️</h2>
+            <p>You make my heart skip a beat!</p>
+            <button id="reset">
+                <i class="fas fa-redo"></i> Ask Again
+            </button>
         </div>
     </div>
 
