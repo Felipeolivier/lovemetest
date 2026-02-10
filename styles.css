@@ -1,1 +1,71 @@
-CARAI
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #ffe6ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+    position: relative;
+}
+
+.emoji {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.buttons {
+    position: relative;
+    height: 80px;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+#yesBtn {
+    background: #ff6b9a;
+    color: white;
+}
+
+#noBtn {
+    background: #ccc;
+    position: absolute;
+}
+
+/* Resultado */
+.result {
+    text-align: center;
+}
+
+.result img {
+    width: 200px;
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none;
+}
