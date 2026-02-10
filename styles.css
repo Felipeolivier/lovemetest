@@ -56,7 +56,7 @@ button {
 
 #noBtn {
     background: #ccc;
-    position: relative;
+    position: absolute;
 
 }
 
