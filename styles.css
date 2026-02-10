@@ -35,10 +35,9 @@ h2 {
 .buttons {
     position: relative;
     height: 80px;
-
     display: flex;
     justify-content: center;
-    gap: 20px; /* espaço entre YES e NÃO */
+    gap: 35px; /* espaço entre YES e NÃO */
 }
 
 button {
